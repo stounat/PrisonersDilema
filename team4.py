@@ -17,6 +17,23 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
+    if my_score % 20== 0:
+        return 'c'
+    if len(their_history > 2):
+        for i in range(len(their_history)):
+            b_counter = 0  
+            if their_history[i] == 'b':
+                b_counter += 1
+            c_counter = 0
+            if their_history[i] == 'c':
+                c_counter += 1 
+            if b_counter > c_counter:
+                return 'b'
+            if b_counter== c_counter:
+                return random.choice(['b', 'c'])
+            if my_score > their_score:
+                return 'c'
+   
 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
