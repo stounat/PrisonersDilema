@@ -11,6 +11,7 @@ team_name = 'Jacob?' # Only 10 chars displayed.
 strategy_name = 'Operation Charlie is a Jerk'
 strategy_description = 'Time based betrayal'
 
+
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
